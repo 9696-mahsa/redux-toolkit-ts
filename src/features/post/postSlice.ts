@@ -45,7 +45,7 @@ export const postsSlice = createSlice({
         state.status = 'loading';
       })
       .addCase(fetchPostsAsync.fulfilled, (state, action) => {
-        state.status = 'idle';
+        state.status = 'idle'; // if you don't update the state, even the logs dont apear on console.
         console.log('mm 700')
       console.log(action.payload)
         state.posts = (action.payload);
